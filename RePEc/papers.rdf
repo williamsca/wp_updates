@@ -520,7 +520,7 @@ Author-Person: pgi275
 Author-Workplace-Name: Williams College
 Author-Workplace-Homepage: https://econ.williams.edu/profile/mg17/
 Title: Regulation-Induced Pollution Substitution
-Abstract: Regulations may cause firms to re-optimize over pollution inputs, leading to unintended consequences. By regulating air emissions in particular counties, the Clean Air Act (CAA) gives firms incentives to substitute: 1) toward polluting other media, like landfills and waterways; and 2) toward pollution from plants in other counties. Using EPA Toxic Release Inventory data, I examine the effect of CAA regulation on these types of substitution. Regulated plants increase water emissions by 105 percent (72 log points). Regulation of an average plant increases air emissions at unregulated plants within the same firm by 13 percent. This leakage offsets 57 percent of emissions reductions by regulated firms.
+Abstract: Regulations may cause firms to re-optimize over pollution inputs, leading to unintended consequences. By regulating air emissions in particular counties, the Clean Air Act (CAA) gives firms incentives to substitute: 1) toward polluting other media, like landfills and waterways and 2) toward pollution from plants in other counties. Using EPA Toxic Release Inventory data, I examine the effect of CAA regulation on these types of substitution. Regulated plants increase water emissions by 105 percent (72 log points). Regulation of an average plant increases air emissions at unregulated plants within the same firm by 13 percent. This leakage offsets 57 percent of emissions reductions by regulated firms.
 Classification-JEL: Q53, Q52, H23
 Keywords:
 Length: 71 pages
@@ -2166,7 +2166,7 @@ Title: Fertility Responses to Prevention of Mother-to-Child Transmission of HIV
 Abstract: Prevention of mother-to-child transmission (PMTCT) interventions reduce the cumulative probability of transmission from a HIV positive woman to her child by as much as 40
  percentage points. This paper is the first economic analysis of the behavioral effects of PMTCT. I examine fertility responses to the scale-up of PMTCT in Zambia, a country where approximately 15 percent of adults age 15-49 are HIV positive. My results suggest that the local introduction of PMTCT reduced pregnancy rates by up to 20 percent, that the fertility response was greater among women who were more likely to be HIV positive, and that PMTCT substantially increased breastfeeding rates.
 Classification-JEL: I10, J13
-Keywords: Fertility; HIV/AIDS; PMTCT; reproductive technology; Zambia
+Keywords: Fertility, HIV/AIDS, PMTCT, reproductive technology, Zambia
 Length: 36 pages
 Number: 2011-11
 Note:
@@ -5340,8 +5340,8 @@ Abstract: We use VARs to study the transmission of shocks in Argentina during th
  interest rates react to U.S. monetary policy, but such shocks do not affect Argentine output
  significantly. Finally, it does not appear that the appreciation of the U.S. dollar affected the
  economy adversely.
-Classification-JEL: C32; E52; F41.
-Keywords: International Transmission; Argentina; Currency Board; Monetary Policy.
+Classification-JEL: C32, E52, F41.
+Keywords: International Transmission, Argentina, Currency Board, Monetary Policy.
 Creation-Date: 2004-07
 File-URL: http://web.williams.edu/Economics/wp/geiregatSVARArgentinaPaper.pdf
 Handle: RePEc:wil:wileco:2004-11
@@ -5520,7 +5520,7 @@ Abstract: This study clarifies the conditions under which learning in games prod
  threshold, the improvement is statistically insignificant. Within the class of supermodular games, increasing
  the parameter far beyond the threshold does not significantly improve convergence. Simulation shows that
  while most experimental results persist in the long run, some become more pronounced.
-Classification-JEL: C90; D70
+Classification-JEL: C90, D70
 Keywords: learning, supermodular games
 Publication-Status: published in The American Economic Review, 94(5), December 2004,
   15051503.
@@ -5658,7 +5658,7 @@ Abstract: Supporters of mega-sporting events such as the World Cup and Olympics 
  hosting these games. Our research suggests that in most cases mega-sporting events are an even worse
  investment for developing countries than for industrialized countries.
 Classification-JEL: O2, L83
-Keywords: Development Planning and Policy; Sports, Gambling, Recreation, Tourism
+Keywords: Development Planning and Policy, Sports, Gambling, Recreation, Tourism
 Length: 26 pages
 Number: 2003-17
 Note:
@@ -5695,7 +5695,7 @@ Abstract:  Although state-operated lotto games have the worst average expected p
  circumstances where such a purchase would provide a positive return with 11% of the drawings
  providing a fair bet to the player.
 Classification-JEL: D81, H71, L83
-Keywords: Lotto; Lottery; Gambling
+Keywords: Lotto, Lottery, Gambling
 Length: 26 pages
 Number: 2003-16
 Note:
@@ -5733,7 +5733,7 @@ Abstract:  Civic boosters generally have estimated the Super Bowl to have an imp
  economies. Indeed, the evidence indicates that at best the Super Bowl contributes approximately
  one-quarter of what the NFL promises.
 Classification-JEL: L83, R53
-Keywords: Super Bowl; Football; Sports; Impact analysis
+Keywords: Super Bowl, Football, Sports, Impact analysis
 Length: 33 pages
 Number: 2003-15
 Note:
@@ -5791,7 +5791,7 @@ Abstract:  This paper examines issues related to the economic impact of sports
  large positive effect of such championships, a closer examination leads to the conclusion
  that the impact is likely much smaller than touted and may even be negative.
 Classification-JEL: L83, R53
-Keywords: Mega-event; sports; sporting events; impact analysis
+Keywords: Mega-event, sports, sporting events, impact analysis
 Length: 12 pages
 Number: 2003-13
 Note:
@@ -6053,7 +6053,7 @@ Abstract: This paper develops an impure public good model to analyze the compara
  results generate new insights into the important and sometimes counterintuitive relationship
  between demand for green products and demand for environmental quality.
 Classification-JEL: H41, Q21
-Keywords: impure public goods; green products; environmental quality
+Keywords: impure public goods, green products, environmental quality
 Creation-Date: 2003-09
 Publication-Status: published in Journal of Environmental Economics and Management,
    March 2005, v. 49, iss. 2, pp. 281-300
@@ -6108,7 +6108,7 @@ Abstract: This paper analyzes how corporate capital gains taxes affect the capit
  Similarly, an analysis of firm-level investment and property, plant, and equipment (PPE) disposal decisions and gain recognition
  behavior similarly suggests an important role for these taxes in determining when firms raise money by disposing of assets and realizing gains.
 Classification-JEL: H25, G32, G38, K34, E62
-Keywords: Capital gains; capital gains taxation; corporate taxation;
+Keywords: Capital gains, capital gains taxation, corporate taxation,
 Creation-Date: 2003-11
 Number: 2003-04
 File-URL: http://web.williams.edu/Economics/wp/gentrydesai_gentry_corp_cap_gains_11_23.pdf
@@ -6135,7 +6135,7 @@ Abstract: This paper examines the responsiveness of investment to q (i.e., the r
  sensitivities, even in an industry that seems to meet many of the assumptions in Tobin's original paper, but that Tobin's
  investment model performs well with a better measure of q.
 Classification-JEL: E22, G31
-Keywords: Investment; Tobin's q; Real Estate Investment Trusts
+Keywords: Investment, Tobin's q, Real Estate Investment Trusts
 Creation-Date: 2003-07
 Publication-Status:
 Number: 2003-03
@@ -6330,7 +6330,7 @@ Abstract:  This paper provides evidence regarding gains to agricultural market l
  sector to incentive reform exceed gains to market liberalization by a factor of ten.  Our method of analyzing the
  effects of transition policies on economic performance can be generalized to other reform paths in other transition economies.
 Classification-JEL: O1, Q11, P32, N55
-Keywords: China, agriculture; adjustment cost model; economic transition
+Keywords: China, agriculture, adjustment cost model, economic transition
 Length: 43 pages
 Number: 2002-05
 Note:
@@ -7077,7 +7077,7 @@ Abstract:  Using several independent data sets, we investigate the relationship 
  share of parliamentary seats and senior positions in the government bureaucracy, and comprise a larger
  share of the labor force.
 Classification-JEL: K42, J16
-Keywords: Corruption; Gender; Public policy
+Keywords: Corruption, Gender, Public policy
 Length: 40 pages
 Number: 2000-10
 Note:
@@ -7187,7 +7187,7 @@ Abstract:  This paper analyzes the conditions under which joint liability loans 
  contracting or collusion amongst borrowers is shown to only harm credit access, even when
  borrowers enjoy a monitoring advantage relative to outsiders.
 Classification-JEL: D82, O16, G2, G24
-Keywords: Joint-Liability; Group-Lending; Credit-Cooperatives; Financial-Intermediation
+Keywords: Joint-Liability, Group-Lending, Credit-Cooperatives, Financial-Intermediation
 Length: 36 pages
 Number: 2000-07
 Note:
@@ -7262,9 +7262,9 @@ Abstract: This paper estimates the effect of marginal tax rates on
  of portfolios).
 Classification-JEL: G11, H31, H24, c33
 Publication-Status:
-Keywords: Portfolio Choice; Fiscal Policies and Behavior of Economic
- Agents (Households); Personal Income and Other Nonbusiness Taxes and
- Subsidies; Econometric Methods for Panel Data
+Keywords: Portfolio Choice, Fiscal Policies and Behavior of Economic
+ Agents (Households), Personal Income and Other Nonbusiness Taxes and
+ Subsidies, Econometric Methods for Panel Data
 Creation-Date: 2000-10
 Number: 2000-05
 File-URL:http://web.williams.edu/Economics/wp/bakijaportfolio.pdf

@@ -1,3 +1,12 @@
+"""
+This is code to update the papers.rdf file that contains information
+about the working paper series at Williams College.
+
+Author: Colin Williams
+Last updated: Feb 2017
+"""
+
+
 import os
 import pickle
 

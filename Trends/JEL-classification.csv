@@ -1,0 +1,649 @@
+number,date,classification
+2016-18,2016-12,beliefs
+2016-18,2016-12,polarization
+2016-18,2016-12,learning
+2016-18,2016-12,bayesian updating
+2016-17,2016-12,industrial location
+2016-17,2016-12,china
+2016-17,2016-12,location quotient
+2016-16,2016-11,
+2016-14,2015-10,
+2016-13,2016-09,
+2016-12,2016-08,
+2016-11,2016-05,anchoring bias
+2016-11,2016-05,recall data
+2016-11,2016-05,self-reporting
+2016-11,2016-05,smallholder farmers
+2016-11,2016-05,central america
+2016-10,2014-03,employment risk
+2016-10,2014-03,performance
+2016-10,2014-03,recruitment
+2016-10,2014-03,randomized controlled trial
+2016-10,2014-03,stress
+2016-09,2016-01,
+2016-08,2016-10,
+2016-07,2016-10,labor coercion
+2016-07,2016-10,serfdom
+2016-07,2016-10,development
+2016-07,2016-10,russia
+2016-07,2016-10,persistence
+2016-06,2016-03,leverage
+2016-06,2016-03,asset prices
+2016-06,2016-03,securitized markets
+2016-06,2016-03,cash-synthetic basis
+2016-05,2016-08,non-cognitive characteristics
+2016-05,2016-08,parental investment
+2016-05,2016-08,intrahousehold allocation
+2016-04,2016-07,
+2016-03,2016-10,
+2016-02,2016-03,comparative development
+2016-02,2016-03,natural selection
+2016-02,2016-03,human evolution
+2016-02,2016-03,malthusian era
+2016-02,2016-03,neolithic revolution
+2016-02,2016-03,genes
+2016-02,2016-03,race
+2016-01,2016-02,human capital
+2016-01,2016-02,air pollution
+2016-01,2016-02,avoidance behavior
+2016-01,2016-02,carbon monoxide
+2015-17,2015-08,
+2015-16,2015-05,road pricing
+2015-16,2015-05,traffic policy
+2015-16,2015-05,air pollution
+2015-15,2015-07,punishment
+2015-15,2015-07,cooperation
+2015-15,2015-07,gift exchange
+2015-15,2015-07,reciprocity
+2015-14,2015-07,asset-backed securities
+2015-14,2015-07,current account deficit
+2015-14,2015-07,global imbalances
+2015-14,2015-07,gross international asset positions
+2015-14,2015-07,idiosyncratic risk
+2015-13,2015-07,leverage
+2015-13,2015-07,margins
+2015-13,2015-07,asset prices
+2015-13,2015-07,default
+2015-13,2015-07,securitized markets
+2015-13,2015-07,asset-backed securities
+2015-13,2015-07,collateralized debt obligations
+2015-12,2015-07,
+2015-11,2015-07,hyperbolic discounting
+2015-11,2015-07,epstein-zin
+2015-11,2015-07,portfolio choice
+2015-11,2015-07,financial literacy
+2015-10,2015-07,asset pricing puzzles
+2015-10,2015-07,heterogeneous-agent model
+2015-10,2015-07,model misspecification
+2015-10,2015-07,recursive preferences
+2015-09,2015-06,classroom game
+2015-09,2015-06,spatial agglomeration
+2015-09,2015-06,conservation
+2015-09,2015-06,land use
+2015-09,2015-06,economic education
+2015-08,2015-04,civil conflict
+2015-08,2015-04,genetic diversity
+2015-08,2015-04,fractionalization
+2015-08,2015-04,polarization
+2015-08,2015-04,interpersonal trust
+2015-08,2015-04,preferences for public goods
+2015-08,2015-04,economic inequality
+2015-07,2014-04,hunting and gathering
+2015-07,2014-04,agriculture
+2015-07,2014-04,neolithic revolution
+2015-07,2014-04,climatic volatility
+2015-07,2014-04,broad spectrum revolution
+2015-07,2014-04,technological progress
+2015-06,2013-01,
+2015-05,2015-04,english language
+2015-05,2015-04,research output
+2015-05,2015-04,economist rankings
+2015-04,2015-04,
+2015-03,2015-04,leverage
+2015-03,2015-04,risk
+2015-03,2015-04,collateral constraints
+2015-03,2015-04,asset prices
+2015-02,2015-04,leverage
+2015-02,2015-04,macroeconomic instability
+2015-02,2015-04,borrowing constraints
+2015-02,2015-04,banks
+2015-02,2015-04,macroprudential regulation
+2015-02,2015-04,financial crises
+2015-01,2015-04,financial intermediation
+2015-01,2015-04,systemic risk
+2015-01,2015-04,default
+2014-06,2014-11,value added tax
+2014-06,2014-11,exports
+2014-06,2014-11,evasion
+2014-05,2014-11,health
+2014-05,2014-11,agglomeration
+2014-05,2014-11,nonprofits
+2014-04,2014-01,
+2014-03,2012-01,reciprocity
+2014-03,2012-01,public bad
+2014-03,2012-01,logrolling
+2014-03,2012-01,social preferences
+2014-03,2012-01,externalities
+2014-03,2012-01,public good
+2014-02,2014-03,discovered preferences
+2014-02,2014-03,preference stability
+2014-02,2014-03,learning
+2014-02,2014-03,risk preferences
+2014-01,2010-04,temporal spillovers
+2014-01,2010-04,slippage
+2014-01,2010-04,land use
+2014-01,2010-04,payments for environmental services
+2014-01,2010-04,conservation reserve program
+2013-18,2013-11,exports
+2013-18,2013-11,education
+2013-18,2013-11,human capital
+2013-18,2013-11,structural change
+2013-17,2010-04,conservation reserve program
+2013-17,2010-04,land use
+2013-17,2010-04,environmental policy
+2013-17,2010-04,farm policy
+2013-16,2013-06,medicaid
+2013-16,2013-06,wage pass-through
+2013-16,2013-06,nursing home
+2013-16,2013-06,direct care staff
+2013-16,2013-06,quality of care
+2013-16,2013-06,fgls
+2013-15,2013-01,russia
+2013-15,2013-01,agronomy
+2013-15,2013-01,political economy
+2013-15,2013-01,agriculture
+2013-14,2013-05,russia
+2013-14,2013-05,economic history
+2013-14,2013-05,serfdom
+2013-14,2013-05,inequality
+2013-14,2013-05,land reform
+2013-14,2013-05,institutions
+2013-13,2011-03,russia
+2013-13,2011-03,inequality
+2013-13,2011-03,economic history
+2013-12,2011-08,agent-based computational model
+2013-12,2011-08,trend inflation
+2013-12,2011-08,price dispersion
+2013-12,2011-08,firm turnover
+2013-11,2011-08,fertility
+2013-11,2011-08,population size
+2013-11,2011-08,age structure
+2013-11,2011-08,child quality
+2013-11,2011-08,worker experience
+2013-11,2011-08,labor force participation
+2013-11,2011-08,capital accumulation
+2013-11,2011-08,natural resources
+2013-11,2011-08,income per capita
+2013-10,2010-08,
+2013-09,2013-09,public bad
+2013-09,2013-09,public good
+2013-09,2013-09,social preferences
+2013-09,2013-09,reciprocity
+2013-09,2013-09,externalities
+2013-09,2013-09,in-group-out-group
+2013-09,2013-09,parochial altruism
+2013-06,2013-07,
+2013-05,2013-03,
+2013-04,2013-07,corruption
+2013-04,2013-07,exports
+2013-04,2013-07,intermediaries
+2013-03,2013-09,public goods
+2013-03,2013-09,direct and indirect reciprocity
+2013-03,2013-09,experiment
+2013-03,2013-09,peer-to-peer fundraising
+2013-02,2013-08,common pool resource
+2013-02,2013-08,communication
+2013-02,2013-08,information
+2013-02,2013-08,pigouvian subsidy
+2013-02,2013-08,social norms
+2013-02,2013-08,voluntary cooperation
+2013-02,2013-08,laboratory experiment
+2013-01,2013-06,charitable donations
+2013-01,2013-06,incentive effects of taxation
+2012-07,2013-02,immigrants
+2012-07,2013-02,social security
+2012-07,2013-02,retirement
+2012-07,2013-02,wealth
+2012-06,2012-11,intergenerational mobility
+2012-06,2012-11,educational tracking
+2012-06,2012-11,school districts
+2012-06,2012-11,residential sorting
+2012-05,2012-11,medicaid expansions
+2012-05,2012-11,take-up
+2012-05,2012-11,crowd-out
+2012-05,2012-11,treatment effects
+2012-05,2012-11,switching probit model
+2012-05,2012-11,counterfactual policy analysis
+2012-04,2012-04,arts
+2012-04,2012-04,economic growth
+2012-04,2012-04,non-profit organizations
+2012-03,2012-05,hiv/aids
+2012-03,2012-05,hiv prevention
+2012-03,2012-05,pmtct
+2012-03,2012-05,zambia
+2012-02,2012-01,logrolling
+2012-02,2012-01,social preferences
+2012-02,2012-01,reciprocity
+2012-02,2012-01,externalities
+2012-02,2012-01,public bad
+2012-02,2012-01,public good
+2012-01,2012-01,
+2011-15,2011-11,cultural assimilation
+2011-15,2011-11,cultural diffusion
+2011-15,2011-11,cultural diversity
+2011-15,2011-11,geographical isolation
+2011-15,2011-11,economic development
+2011-15,2011-11,agriculture
+2011-15,2011-11,industrialization
+2011-14,2011-08,hiv/aids
+2011-14,2011-08,male circumcision
+2011-14,2011-08,risk compensation
+2011-14,2011-08,beliefs
+2011-14,2011-08,kenya
+2011-13,2011-11,remittances
+2011-13,2011-11,immigration
+2011-13,2011-11,wages
+2011-12,2011-09,experimental economics
+2011-12,2011-09,public goods
+2011-12,2011-09,effort contribution
+2011-12,2011-09,environment
+2011-12,2011-09,climate change
+2011-11,2011-05,fertility
+2011-11,2011-05,hiv/aids
+2011-11,2011-05,pmtct
+2011-11,2011-05,reproductive technology
+2011-11,2011-05,zambia
+2011-10,2011-09,
+2011-09,2011-06,
+2011-08,2011-07,tax evasion
+2011-08,2011-07,compliance
+2011-08,2011-07,honesty
+2011-08,2011-07,dependent exemption
+2011-07,2011-06,russia
+2011-07,2011-06,livings standards
+2011-07,2011-06,economic history
+2011-06,2011-06,brazil
+2011-06,2011-06,russia
+2011-06,2011-06,india
+2011-06,2011-06,china
+2011-06,2011-06,economic history
+2011-06,2011-06,education
+2011-06,2011-06,political economy
+2011-06,2011-06,elites
+2011-05,2011-06,tax evasion
+2011-05,2011-06,compliance
+2011-05,2011-06,honesty
+2011-05,2011-06,dependent exemption
+2011-04,2011-05,
+2011-03,2011-05,agent-based computational model
+2011-03,2011-05,market organization
+2011-03,2011-05,banking system
+2011-03,2011-05,macroeconomic stability
+2011-03,2011-05,financial stabilizer
+2011-02,2010-11,foreign direct investment
+2011-02,2010-11,employment protection
+2011-02,2010-11,race to the bottom
+2011-01,2010-12,
+2010-23,2010-10,hiv/aids
+2010-23,2010-10,beliefs
+2010-23,2010-10,selection
+2010-23,2010-10,rationing
+2010-23,2010-10,zambia
+2010-22,2008-03,income distribution
+2010-22,2008-03,behavioral response to taxation
+2010-21,2010-10,commodity shocks
+2010-21,2010-10,copper mining
+2010-21,2010-10,economic growth
+2010-21,2010-10,hiv/aids
+2010-21,2010-10,zambia
+2010-20,2010-08,identity
+2010-20,2010-08,institutional persistence
+2010-20,2010-08,networks
+2010-20,2010-08,occupational choice
+2010-20,2010-08,mobility
+2010-19,2010-10,public goods
+2010-19,2010-10,reciprocity
+2010-19,2010-10,experiment
+2010-19,2010-10,peer-to-peer fundraising
+2010-18,2008-07,real exchange rate
+2010-18,2008-07,saving
+2010-18,2008-07,growth
+2010-17,2010-10,remittances
+2010-17,2010-10,output volatility
+2010-17,2010-10,developing countries
+2010-16,2010-04,globalization
+2010-16,2010-04,higher education
+2010-16,2010-04,enrollment
+2010-16,2010-04,offshoring
+2010-16,2010-04,immigration
+2010-15,2010-07,countercyclical policy
+2010-15,2010-07,fiscal space
+2010-15,2010-07,international reserves
+2010-15,2010-07,multilateral
+2010-14,2010-07,monetary policy
+2010-14,2010-07,exchange rate
+2010-14,2010-07,interest rate
+2010-14,2010-07,banks
+2010-14,2010-07,credit
+2010-14,2010-07,institutions
+2010-13,2010-07,remittances
+2010-13,2010-07,institutions
+2010-13,2010-07,corruption
+2010-12,2010-09,remittances
+2010-12,2010-09,real exchange rate
+2010-12,2010-09,dutch disease
+2010-11,2008-12,immigration
+2010-11,2008-12,firms
+2010-11,2008-12,establishments
+2010-10,2008-07,offshoring
+2010-10,2008-07,outsourcing
+2010-10,2008-07,immigration
+2010-10,2008-07,productivity effect
+2010-10,2008-07,wages
+2010-09,2010-09,college finance
+2010-09,2010-09,education tax credits
+2010-09,2010-09,and college enrollment
+2010-08,2010-07,war
+2010-08,2010-07,colonialism
+2010-08,2010-07,india
+2010-07,2010-08,charitable donations
+2010-07,2010-08,incentive effects of taxation
+2010-07,2010-08,marriage
+2010-07,2010-08,relative income
+2010-07,2010-08,inequality
+2010-07,2010-08,identity
+2010-07,2010-08,inequality
+2010-07,2010-08,wage distributions
+2010-07,2010-08,local expenditures
+2010-07,2010-08,local taxes
+2010-04,2010-06,
+2010-03,2010-06,reserve supply
+2010-03,2010-06,reserve demand
+2010-03,2010-06,liquidity effect
+2010-03,2010-06,announcement effect
+2010-02,2010-05,hunting and gathering
+2010-02,2010-05,agriculture
+2010-02,2010-05,neolithic revolution
+2010-02,2010-05,climatic volatility
+2010-02,2010-05,technological progress
+2010-02,2010-05,population density
+2010-01,2010-01,technological progress
+2010-01,2010-01,population density
+2010-01,2010-01,malthusian stagnation
+2010-01,2010-01,land productivity
+2010-01,2010-01,neolithic revolution
+2009-07,2009-04,eitc
+2009-07,2009-04,self-employment
+2009-06,2009-12,financial crisis
+2009-06,2009-12,securitization
+2009-06,2009-12,regulation and supervision
+2009-06,2009-12,safety nets
+2009-05,2009-09,financial crisis
+2009-05,2009-09,securitization
+2009-05,2009-09,regulation and supervision
+2009-05,2009-09,safety nets
+2009-04,2009-09,growth
+2009-04,2009-09,development
+2009-04,2009-09,isolation
+2009-04,2009-09,agglomeration
+2009-04,2009-09,globalization
+2009-03,2009-06,
+2009-02,2009-03,laboratory experimental methods
+2009-02,2009-03,experimental economics
+2009-02,2009-03,laboratory selection effects
+2009-01,2009-03,experimental economics
+2009-01,2009-03,behavioral
+2009-01,2009-03,retirement
+2009-01,2009-03,annuities
+2008-23,2008-11,russia
+2008-23,2008-11,economic history
+2008-23,2008-11,political economy
+2008-23,2008-11,local government
+2008-22,2008-12,experimental economics
+2008-22,2008-12,trust
+2008-22,2008-12,reputation
+2008-22,2008-12,electronic markets
+2008-21,2008-10,
+2008-20,2008,animal genetic resources
+2008-20,2008,gene flow
+2008-20,2008,germplasm trade
+2008-19,2008,
+2008-18,2008-07,
+2008-17,2008-10,
+2008-16,2008-06,aging
+2008-16,2008-06,labor supply
+2008-16,2008-06,elderly
+2008-16,2008-06,taxes
+2008-15,2008-05,phillips curve
+2008-15,2008-05,inflation
+2008-14,2008-05,
+2008-13,2008-09,portfolio choice
+2008-13,2008-09,mortality risk
+2008-13,2008-09,marital status
+2008-13,2008-09,precautionary saving
+2008-13,2008-09,be-
+2008-12,2008-07,
+2008-11,2008-05,household portfolios
+2008-11,2008-05,health
+2008-11,2008-05,risk
+2008-10,2008-06,retirement wealth
+2008-10,2008-06,life-cycle saving
+2008-10,2008-06,"mortality risk,"
+2008-09,2008-09,
+2008-08,2008-09,financial crisis
+2008-08,2008-09,securitization
+2008-08,2008-09,regulation and supervision
+2008-08,2008-09,safety nets
+2008-07,2008-09,
+2008-06,2008-09,marriage
+2008-06,2008-09,investments in prenatal care
+2008-06,2008-09,birth outcomes
+2008-06,2008-09,maternal education
+2008-06,2008-09,race and ethnicity
+2008-05,2008-04,
+2008-04,2008-05,credit
+2008-04,2008-05,default
+2008-04,2008-05,cosigner
+2008-04,2008-05,rosca
+2008-03,2008-05,
+2008-02,2008-02,kurtosis
+2008-02,2008-02,exchange rates
+2008-02,2008-02,order flow
+2008-02,2008-02,high-frequency
+2008-02,2008-02,microstructure
+2008-02,2008-02,jump process
+2008-02,2008-02,"value-atrisk,"
+2008-01,2008-07,charitable donations
+2008-01,2008-07,incentive effects of taxation
+2007-07,2007-11,russia
+2007-07,2007-11,livings standards
+2007-07,2007-11,economic history
+2007-06,2007-01,rural credit markets
+2007-06,2007-01,information acquisition
+2007-06,2007-01,predatory lending
+2007-05,2007-05,
+2007-04,2007-06,
+2007-03,2007-07,
+2007-02,2007-12,
+2007-01,2007-08,defaults
+2007-01,2007-08,risk
+2007-01,2007-08,auctions
+2007-01,2007-08,asymmetric information
+2006-06,2006-04,wealth
+2006-06,2006-04,gender
+2006-06,2006-04,family structure
+2006-06,2006-04,
+2006-06,2006-04,infertility treatment
+2006-06,2006-04,infertility
+2006-06,2006-04,impaired fecundity
+2006-06,2006-04,health disparities
+2006-06,2006-04,health insurance mandates
+2006-06,2006-04,
+2006-06,2006-04,
+2006-06,2006-04,
+2005-08,2005-01,
+2005-08,2005-01,infertility
+2005-08,2005-01,impaired fecundity
+2005-08,2005-01,insurance mandates
+2005-08,2005-01,fertility
+2005-08,2005-01,migration
+2005-08,2005-01,educational attainment
+2005-08,2005-01,rural china
+2005-08,2005-01,migration
+2005-08,2005-01,educational attainment
+2005-08,2005-01,rural china
+2005-08,2005-01,panel unit roots
+2005-08,2005-01,cointegration rank tests
+2005-08,2005-01,robust autocovariance estimation
+2005-08,2005-01,china
+2005-08,2005-01,convergence
+2005-08,2005-01,nonstationary panels
+2005-08,2005-01,
+2005-08,2005-01,
+2004-17,2005-01,house values
+2004-17,2005-01,hedonic models
+2004-17,2005-01,public schools
+2004-17,2005-01,consumer
+2004-17,2005-01,electricity
+2004-17,2005-01,environment
+2004-17,2005-01,households
+2004-17,2005-01,individual
+2004-17,2005-01,cointegration
+2004-17,2005-01,ppp
+2004-17,2005-01,time series
+2004-14,2005-01,china
+2004-14,2005-01,elderly
+2004-14,2005-01,employment
+2004-14,2005-01,retirement
+2004-14,2005-01,
+2004-14,2005-01,taxation
+2004-14,2005-01,elderly
+2004-14,2005-01,migration
+2004-14,2005-01,state and local government
+2004-14,2005-01,progressive
+2004-14,2005-01,
+2004-14,2005-01,financial integration
+2004-14,2005-01,eastern europe
+2004-14,2005-01,eu enlargement
+2004-14,2005-01,microcredit
+2004-14,2005-01,social sanctions
+2004-14,2005-01,grameen bank
+2004-14,2005-01,international transmission
+2004-14,2005-01,argentina
+2004-14,2005-01,currency board
+2004-14,2005-01,monetary policy.
+2004-14,2005-01,pure and impure public goods
+2004-14,2005-01,private provision
+2004-14,2005-01,green electricity
+2004-14,2005-01,
+2004-14,2005-01,
+2004-14,2005-01,
+2004-14,2005-01,growth
+2004-14,2005-01,convergence
+2004-14,2005-01,social capital
+2004-14,2005-01,nonstationary panels
+2004-14,2005-01,learning
+2004-14,2005-01,supermodular games
+2004-14,2005-01,
+2003-18,2003-05,bequest
+2003-18,2003-05,inheritance
+2003-18,2003-05,taxes
+2003-17,2003-03,development planning and policy
+2003-17,2003-03,sports
+2003-17,2003-03,gambling
+2003-17,2003-03,recreation
+2003-17,2003-03,tourism
+2003-16,2003-08,lotto
+2003-16,2003-08,lottery
+2003-16,2003-08,gambling
+2003-15,2003-12,super bowl
+2003-15,2003-12,football
+2003-15,2003-12,sports
+2003-15,2003-12,impact analysis
+2003-14,2003-03,
+2003-13,2003-12,mega-event
+2003-13,2003-12,sports
+2003-13,2003-12,sporting events
+2003-13,2003-12,impact analysis
+2003-12,2003-05,
+2003-11,2002-12,
+2003-10,2003-06,
+2003-09,2003-12,
+2003-08,2003-06,
+2003-07,2003-09,
+2003-06,2003-09,impure public goods
+2003-06,2003-09,green products
+2003-06,2003-09,environmental quality
+2003-05,2003-09,public goods
+2003-04,2003-09,capital gains
+2003-04,2003-09,capital gains taxation
+2003-04,2003-09,"corporate taxation,"
+2003-03,2003-09,investment
+2003-03,2003-09,tobin's q
+2003-03,2003-09,real estate investment trusts
+2003-02,2003-09,women
+2003-02,2003-09,agriculture
+2003-02,2003-09,china
+2003-02,2003-09,farm labor
+2003-01,2003-09,china
+2003-01,2003-09,migration
+2003-01,2003-09,development
+2003-01,2003-09,household investment
+2003-01,2003-09,dynamic panel data
+2002-09,2002-10,
+2002-08,2001-03,
+2002-07,2002-10,
+2002-05,2002-06,china
+2002-05,2002-06,agriculture
+2002-05,2002-06,adjustment cost model
+2002-05,2002-06,economic transition
+2002-04,2002-06,urban sprawl
+2002-04,2002-06,property tax
+2002-04,2002-06,land use regulation
+2002-03,2000-12,
+2002-02,2002-09,
+2002-01,2002-07,online learning; information economics; model selection; direct search
+2001-14,2002-07,economic growth
+2001-14,2002-07,environmental quality
+2001-14,2002-07,environmental kuznets curve
+2001-14,2002-07,population growth
+2001-13,2002-07,environmental tax
+2001-13,2002-07,second best
+2001-13,2002-07,double dividend
+2001-13,2002-07,optimal taxation
+2001-11,2002-07,self employment
+2001-11,2002-07,factor shares
+2001-11,2002-07,income shares
+2001-11,2002-07,labor shares
+2001-10,2001-04,agrarian organization
+2001-10,2001-04,political economy
+2001-10,2001-04,land reform
+2001-09,2000-05,
+2001-08,2002-03,
+2001-07,2002-03,gross international capital flows
+2001-07,2002-03,asymmetricinformation
+2001-07,2002-03,trading volume
+2001-06,2002-10,
+2001-05,2001-10,
+2001-04,2001-10,
+2001-03,2001-10,
+2001-02,2001-01,
+2001-01,2001-11,
+2000-11,2000-11,auctions
+2000-11,2000-11,fund-raising
+2000-11,2000-11,indian guilds
+2000-11,2000-11,taxation
+2000-10,2000-08,corruption; gender; public policy
+2000-09,2000-12,
+2000-08,2001-07,financial intermediation
+2000-08,2001-07,monitored lending
+2000-08,2001-07,moral hazard and costly state verification
+2000-08,2001-07,chile
+2000-07,2000-09,joint-liability; group-lending; credit-cooperatives; financial-intermediation
+2000-06,2000-09,charitable donations
+2000-06,2000-09,"incentive effects of taxation,"
+2000-05,2000-09,portfolio choice; fiscal policies and behavior of economic
+2000-04,2000-07,
+2000-03,2000-08,
+2000-02,1999-11,
+2000-01,,
