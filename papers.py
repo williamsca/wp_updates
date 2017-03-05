@@ -6,7 +6,6 @@ Author: Colin Williams
 Last updated: Feb 2017
 """
 
-
 import os
 import pickle
 
@@ -29,14 +28,15 @@ Author_Homepage = pickle.load( open(cwd + "Faculty_Data" + os.sep + "Author_Home
 # Read in existing papers.pdf
 data = ''
 with open(cwd + 'RePEc' + os.sep + 'papers.rdf', 'r') as original:
-    line = original.readline() # Ignore the first line
-    if curYear in original.readline(): # Check whether to update the year header
-        line = original.readline() # Skip the last row of #s
+    line1 = original.readline() # Ignore the first line
+    line2 = original.readline()
+    if curYear in line2: # Check whether to update the year header
+        line3 = original.readline() # Skip the last row of #s
         data = original.read()
-        print("Year unchanged.")
+        print("Year unchanged: " + curYear)
     else:
-        data = original.read()
-        print('It\'s a new year.')
+        data = line1 + line2 + original.read()
+        print('It\'s a new year: ' + curYear)
 original.close()
 
 #Rename the old file as a backup
@@ -45,21 +45,23 @@ original.close()
 
 ###### INPUTS FOR NEW ENTRY ######
 lastNames = ''
-authors = int(input("How many authors?"))
-for i in range (0, authors):
-    firstName = input("Author first name: ")
-    middleI = input("Author middle initial (no period, enter if none): ")
-    lastName = input("Author last name: ")
+firstName, middleI, lastName, fullNameList = [], [], [], []
+numAuthors = int(input("How many authors?"))
+for i in range (0, numAuthors):
+    firstName.append(input("Author first name: "))
+    middleI.append(input("Author middle initial (no period, enter if none): "))
+    lastName.append(input("Author last name: "))
 
     # Add together author last names in anticipation of the file url
-    lastNames += lastName
+    lastNames += lastName[i]
 
     # Build up the full name
-    fullName = firstName + " "
-    if middleI:
-        fullName += (middleI + ". " + lastName)
+    fullName = firstName[i] + " "
+    if middleI[i]: #not sure this works if no middle name
+        fullName += (middleI[i] + ". " + lastName[i])
     else:
-        fullName += lastName
+        fullName += lastName[i]
+    fullNameList.append(fullName)
 
 title = input("Title: ")
 # TODO: fix
@@ -82,24 +84,24 @@ with open(cwd + 'RePEc' + os.sep + 'papers-test.rdf', 'w') as modified:
     modified.write('##################################################\n')
     modified.write('Template-Type: ReDIF-Paper 1.0\n')
 
-    modified.write('Author-Name: ' + fullName + '\n')
-    modified.write('Author-X-Name-First: ' + firstName + '\n')
-    modified.write('Author-X-Name-Last: ' + lastName + '\n')
+    for i in range(0, numAuthors):
+        modified.write('Author-Name: ' + fullNameList[i] + '\n')
+        modified.write('Author-X-Name-First: ' + firstName[i] + '\n')
+        modified.write('Author-X-Name-Last: ' + lastName[i] + '\n')
 
-    modified.write('Author-Person: ')
-    if lastName in RePEc_codes:
-        modified.write(RePEc_codes[lastName])
-    modified.write('\n')
+        modified.write('Author-Person: ')
+        if lastName[i] in RePEc_codes:
+            modified.write(RePEc_codes[lastName[i]])
+        modified.write('\n')
 
-    # Williams Faculty
-    if lastName in Author_Homepage: # Problems when outside authors have the same name as Williams faculty
-        modified.write('Author-Workplace-Name: Williams College' + '\n')
-        modified.write('Author-Workplace-Homepage: https://econ.williams.edu/profile/' + Author_Homepage[lastName] + '\n')
-
-    # Non-Williams Faculty
-    else:
-        modified.write('Author-Workplace-Name: ' + '\n')
-        modified.write('Author-Workplace-Homepage: ' + '\n')
+        # Williams Faculty
+        if lastName[i] in Author_Homepage: # Problems when outside authors have the same name as Williams faculty
+            modified.write('Author-Workplace-Name: Williams College' + '\n')
+            modified.write('Author-Workplace-Homepage: https://econ.williams.edu/profile/' + Author_Homepage[lastName[i]] + '\n')
+        # Non-Williams Faculty
+        else:
+            modified.write('Author-Workplace-Name: ' + '\n')
+            modified.write('Author-Workplace-Homepage: ' + '\n')
 
     modified.write("Title: " + title + '\n')
     modified.write("Abstract: " + '\n')

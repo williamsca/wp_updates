@@ -8,9 +8,7 @@ last updated: Feb 2017
 import os
 import csv
 import networkx as nx
-
-# TODO: build Graph
-# TODO: draw Graph
+import pickle
 
 def parseRDF(path, field = "Keywords"):
     with open(path, 'r') as f:
@@ -42,16 +40,30 @@ def parseRDF(path, field = "Keywords"):
                         writer.writerow(entry)
                         #print(entry)
 
+# Given a csv file, this function constructs a graph data structure
+# by doing the following: a node is created for each unique entry in the
+# third column, and an edge is created between any two nodes that have the
+# same entry in the first column. Repeated instances of a node cause the
+# node's 'weight' attribute to increment.
 def buildGraph(field="keywords"):
     G = nx.Graph()
 
     path = os.getcwd() + os.sep + field + ".csv"
     with open(path, 'r') as f:
         reader = csv.reader(f)
+
         num = 0
         nodes = []
         for row in reader:
             G.add_node(row[2])
+
+            # count how many times the field appears
+            weights = {}
+            if row[2] in weights:
+                weights[row[2]]+=1
+            else:
+                weights[row[2]]=1
+
             if row[0] == num:
                 nodes.append(row[2])
             else:
@@ -62,19 +74,29 @@ def buildGraph(field="keywords"):
                 nodes.append(row[2])
                 num = row[0]
 
-        print(G['china'])
+        #print(G['china'])
     f.close()
 
+    pickle.dump(G, open("pickled-graphs" + os.sep + field +".p", "wb"))
+    pickle.dump(weights, open("pickled-graphs"+os.sep+field+"-weights.p", "wb"))
+    return G
+
+
+# Given a list of lists and a graph, this function adds edges between
+# all items in each list.
 def connectNodes(nodes=[], G=nx.Graph()):
     if len(nodes) > 1:
         for i in range(0, len(nodes)-1):
             #print("Len: " + str(len(nodes)))
             #print(str(i))
             G.add_edge(nodes[-1], nodes[i])
+
+            # This is all wrong
             if 'weight' in G[nodes[-1]][nodes[i]]:
                 G[nodes[-1]][nodes[i]]['weight']+=1
             else:
                 G[nodes[-1]][nodes[i]]['weight']=1
+
         nodes.pop()
         connectNodes(nodes, G)
     return G
