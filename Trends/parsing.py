@@ -54,11 +54,11 @@ def buildGraph(field="keywords"):
 
         num = 0
         nodes = []
+        weights = {}
         for row in reader:
             G.add_node(row[2])
 
             # count how many times the field appears
-            weights = {}
             if row[2] in weights:
                 weights[row[2]]+=1
             else:

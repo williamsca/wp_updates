@@ -39,6 +39,7 @@ def renderAsPlotly(G = nx.Graph(), weights = {}):
     edge_trace = Scatter(
         x=[],
         y=[],
+        #width=[],
         line=Line(width=0.5,color='#888'),
         hoverinfo='none',
         mode='lines')
@@ -63,7 +64,7 @@ def renderAsPlotly(G = nx.Graph(), weights = {}):
             colorscale='YIGnBu',
             reversescale=True,
             color=[],
-            size=10,
+            size=[],
             colorbar=dict(
                 thickness=15,
                 title='Node Connections',
@@ -78,8 +79,9 @@ def renderAsPlotly(G = nx.Graph(), weights = {}):
         node_trace['y'].append(y)
 
         node_info = str(node)
+        weight = weights[node]*4
         node_trace['text'].append(node_info)
-        node_trace['marker']['size'].append(node['weight'])
+        node_trace['marker']['size'].append(weight)
 
     for node, adjacencies in enumerate(G.adjacency_list()):
         node_trace['marker']['color'].append(len(adjacencies))
@@ -115,7 +117,6 @@ def main():
     field = 'keywords'
     G = pickle.load( open("pickled-graphs" + os.sep + field + ".p", "rb"))
     weights = pickle.load( open("pickled-graphs"+os.sep+field+"-weights.p", "rb"))
-
     renderAsPlotly(G, weights)
 
 if __name__ == '__main__':

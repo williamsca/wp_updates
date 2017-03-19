@@ -33,13 +33,15 @@ class numAuthors(QWidget):
         prompt = QLabel("How many authors?")
         num = QSpinBox(self)
 
+        self.dialog = Authors()
+
         # Buttons
         submitButton = QPushButton('Submit', self)
         quitButton = QPushButton('Quit', self)
 
         # Listeners
         quitButton.clicked.connect(QCoreApplication.instance().quit)
-        submitButton.clicked.connect(self.submit())
+        submitButton.clicked.connect(self.on_submitButton_clicked)
 
         # Layout
         grid = QGridLayout()
@@ -65,8 +67,8 @@ class numAuthors(QWidget):
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
-    def submit(self, authors = 1):
-
+    def on_submitButton_clicked(self):
+        self.dialog.show()
 
 class Authors(QWidget):
 
@@ -134,7 +136,7 @@ class Authors(QWidget):
         self.center()
         self.setWindowTitle('Author') #TODO: add author number
 
-        self.show()
+        #self.show()
 
     def center(self):
         qr = self.frameGeometry()
