@@ -1,11 +1,11 @@
 """
 A GUI for updating the RePEc file
 
-This is my first use of PyQt
+This is my first use of PyQt5
 
 I heavily consulted the following tutorial:
 http://zetcode.com/gui/pyqt5/
-as well as this post on dialogs:
+as well as this post on QDialogs:
 http://stackoverflow.com/questions/18196799/how-can-i-show-a-pyqt-modal-dialog-and-get-data-out-of-its-controls-once-its-clo
 
 author: Colin Williams
@@ -13,15 +13,16 @@ last edited: April. 2017
 """
 
 import sys
-from PyQt5.QtWidgets import (QApplication, QWidget,
-    QPushButton, QDesktopWidget, QLabel, QLineEdit,
-    QTextEdit, QGridLayout, QDateEdit, QSpinBox, QDialog, QDialogButtonBox)
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton,
+    QLabel, QLineEdit, QTextEdit, QGridLayout, QDateEdit,
+    QSpinBox, QDialog, QDialogButtonBox)
 from PyQt5.QtCore import QCoreApplication
-
 from collections import deque
 
-# TODO: link to papers.py
 # TODO: test on linux
+# DONE: connect paper input to main window
+# TODO: implement 'submit changes' button
+# TODO: implement 'Williams Author' button
 
 ###############################################################
 class MainWindow(QWidget):
@@ -63,6 +64,9 @@ class MainWindow(QWidget):
 
     def add_paper(self):
         paper, ok = Paper.getPaperInfo()
+        if ok:
+            for line in paper:
+                self.entryEdit.append(line)
 
     def submit_changes(self):
         pass
@@ -162,6 +166,7 @@ class Paper(QDialog):
         self.initUI()
     def initUI(self):
         # Labels
+        #year = QLabel('Year:')
         title = QLabel('Paper Title:')
         abstract = QLabel('Abstract:')
         classification = QLabel('JEL-classification:')
@@ -173,59 +178,73 @@ class Paper(QDialog):
         urlTitle = QLabel('URL Title:')
 
         # Edits
-        titleEdit = QLineEdit()
-        classEdit = QLineEdit()
-        keywordsEdit = QLineEdit()
-        lengthEdit = QSpinBox(self)
-        numberEdit = QSpinBox(self)
-        createdEdit = QDateEdit()
-        urlTitleEdit = QLineEdit("http://web.williams.edu/Economics/wp/")
-        abstractEdit = QTextEdit()
+        #self.yearEdit = QSpinBox(self)
+        self.titleEdit = QLineEdit()
+        self.classEdit = QLineEdit()
+        self.keywordsEdit = QLineEdit()
+        self.lengthEdit = QSpinBox(self)
+        self.numberEdit = QSpinBox(self)
+        self.createdEdit = QDateEdit()
+        self.urlTitleEdit = QLineEdit("http://web.williams.edu/Economics/wp/")
+        self.abstractEdit = QTextEdit()
 
         # Buttons
-        quitButton = QPushButton('Quit', self)
-        submitButton = QPushButton('Submit', self)
-
-        # Listeners
-        quitButton.clicked.connect(QCoreApplication.instance().quit)
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.Ok | QDialogButtonBox.Cancel, self)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
 
         # Layout
         grid = QGridLayout()
         grid.setSpacing(10)
         grid.addWidget(title, 1, 0)
-        grid.addWidget(titleEdit, 1, 1, 1, 2)
+        grid.addWidget(self.titleEdit, 1, 1, 1, 2)
         grid.addWidget(classification, 2, 0)
-        grid.addWidget(classEdit, 2, 1, 1, 2)
+        grid.addWidget(self.classEdit, 2, 1, 1, 2)
         grid.addWidget(keywords, 3, 0)
-        grid.addWidget(keywordsEdit, 3, 1, 1, 2)
+        grid.addWidget(self.keywordsEdit, 3, 1, 1, 2)
         grid.addWidget(length, 4, 0)
-        grid.addWidget(lengthEdit, 4, 1, 1, 2)
+        grid.addWidget(self.lengthEdit, 4, 1, 1, 2)
         grid.addWidget(pages, 4, 3)
         grid.addWidget(number, 5, 0)
-        grid.addWidget(numberEdit, 5, 1, 1, 2)
+        grid.addWidget(self.numberEdit, 5, 1, 1, 2)
         grid.addWidget(created, 6, 0)
-        grid.addWidget(createdEdit, 6, 1, 1, 2)
+        grid.addWidget(self.createdEdit, 6, 1, 1, 2)
         grid.addWidget(urlTitle, 7, 0)
-        grid.addWidget(urlTitleEdit, 7, 1, 1, 2)
+        grid.addWidget(self.urlTitleEdit, 7, 1, 1, 2)
         grid.addWidget(abstract, 8, 0)
-        grid.addWidget(abstractEdit, 8, 1, 1, 2)
-        grid.addWidget(submitButton, 9, 1)
-        grid.addWidget(quitButton, 9, 2)
+        grid.addWidget(self.abstractEdit, 8, 1, 1, 2)
+        grid.addWidget(buttons, 9, 1, 9, 2)
         self.setLayout(grid)
 
         # Focus and tab order
         title.setFocus(True)
-        self.setTabOrder(keywordsEdit, lengthEdit)
-        self.setTabOrder(lengthEdit, numberEdit)
-        self.setTabOrder(createdEdit, urlTitleEdit)
+        self.setTabOrder(self.keywordsEdit, self.lengthEdit)
+        self.setTabOrder(self.lengthEdit, self.numberEdit)
+        self.setTabOrder(self.createdEdit, self.urlTitleEdit)
 
         #self.setGeometry(300, 300, 300, 220)
         self.resize(450, 500)
-        self.center()
-        self.setWindowTitle('Paper')
+        self.setWindowTitle('Enter Paper Information')
 
     def paperInfo(self):
-        info = []
+        info = deque()
+        info.append("Title: " + self.titleEdit.text())
+        info.append("Abstract: " + self.abstractEdit.toPlainText())
+        info.append("Classification-JEL: " + self.classEdit.text())
+        info.append("Keywords: " + self.keywordsEdit.text())
+        info.append("Length: " + str(self.lengthEdit.value()))
+        info.append("Number: " + str(self.numberEdit.value()))
+        info.append("Note: ")
+        info.append("Creation-date: " + str(self.createdEdit.date().toString('yyyy-MM')))
+        info.append("Revision-date: ")
+        info.append("Price: Free")
+        info.append("Publication-Status: ")
+        info.append("File-URL: " + self.urlTitleEdit.text())
+        info.append("File-Format: Application/PDF")
+        info.append("File-Function: Full text")
+        info.append("Handle: RePEc:wil:wileco:2017-" + str(self.numberEdit.value())) #TODO: fix year
+
         return info
 
     @staticmethod
@@ -234,14 +253,6 @@ class Paper(QDialog):
         result = dialog.exec_()
         info = dialog.paperInfo()
         return (info, result == QDialog.Accepted)
-
-        #self.show()
-
-    def center(self):
-        qr = self.frameGeometry()
-        cp = QDesktopWidget().availableGeometry().center()
-        qr.moveCenter(cp)
-        self.move(qr.topLeft())
 
 ###############################################################
 def main():

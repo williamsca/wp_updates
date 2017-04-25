@@ -48,14 +48,14 @@ def addNewEntry(entry = "", curYear = 2017, test = "-test"):
 
 ###############################################################################
 # Simple code to add an entry through the command line. Works
-# on Windows and Linux, but is unable to read the abstract due to its length.
+# on Windows and Linux, but is unable to read in the abstract due to its length.
 ###############################################################################
 # Make compatible with python2
 try:
     input = raw_input
 except NameError:
     pass
-    
+
 def simpleAddEntry():
     curYear = '2017' # Update to keep header correct
     cwd = os.getcwd() + os.sep
