@@ -8,16 +8,37 @@ Last updated: April 2017
 
 import os
 import pickle
+import datetime
+# import paramiko
 
 # TODO: Download .rdf file from server instead of storing on local machine
 # TODO: Upload .rdf file automatically (and safely!)
-# TODO: Generate html
-# TODO: make the user enter the year
+# DONE: Generate html
+# TODO: get the year from sys
+
+# Takes two arguments: a list of paper information in the order of paper number,
+# paper address, and paper title, as in ['01', 'http://...', 'Title']; and a
+# list of authors in alphabetical order
+def genHTML(paperInfo = [], authors = []):
+    authorString = authors[0]
+    for i in range(1, len(authors), 1):
+        if (i == len(authors) - 1): # last author
+            if len(authors) == 2:
+                authorString += " and " + authors[i]
+            else:
+                authorString += ", and " + authors[i]
+        else:
+            authorString += ", " + authors[i]
+
+    html = paperInfo[0] + " -- <a href=\"" + paperInfo[1] + "\">" + paperInfo[2] + "</a>. " + authorString + "."
+    return html
 
 # The 'test' argument specifies whether the output will be written to
 # the actual .rdf file or whether it will be to a test file. For now,
 # the default is to a test file.
-def addNewEntry(entry = "", curYear = 2017, test = "-test"):
+def addNewEntry(entry = "", curYear = "2017", test = "-test"):
+    cwd = os.getcwd() + os.sep
+
     # Read in existing papers.pdf
     data = ''
     with open(cwd + 'RePEc' + os.sep + 'papers.rdf', 'r') as original:
@@ -41,16 +62,29 @@ def addNewEntry(entry = "", curYear = 2017, test = "-test"):
         modified.write('##################################################\n')
         modified.write('Template-Type: ReDIF-Paper 1.0\n')
 
-        modified.write(entry)
+        modified.write(entry + '\n\n')
         modified.write(data)
 
     modified.close()
+
+# A function that replaces the .rdf on the Williams server with the one found
+# on the local machine.
+"""
+def uploadRDF():
+    ssh = paramiko.SSHClient()
+    ssh.load_host_keys(os.path.expanduser(os.path.join("~", ".ssh", "known_hosts")))
+    ssh.connect(server, username=username, password=password)
+    sftp = ssh.open_sftp()
+    sftp.put(localpath, remotepath)
+    sftp.close()
+    ssh.close()
+"""
 
 ###############################################################################
 # Simple code to add an entry through the command line. Works
 # on Windows and Linux, but is unable to read in the abstract due to its length.
 ###############################################################################
-# Make compatible with python2
+# Make compatible with python2.
 try:
     input = raw_input
 except NameError:

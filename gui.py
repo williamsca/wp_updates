@@ -18,10 +18,12 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton,
     QSpinBox, QDialog, QDialogButtonBox)
 from PyQt5.QtCore import QCoreApplication
 from collections import deque
+from papers import addNewEntry, genHTML
 
 # TODO: test on linux
 # DONE: connect paper input to main window
-# TODO: implement 'submit changes' button
+# DONE: generate HTML
+# DONE: implement 'submit changes' button
 # TODO: implement 'Williams Author' button
 
 ###############################################################
@@ -29,6 +31,9 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
+
+        self.paperDetails = [] # keep track of information needed to generate html
+        self.authors = [] # keep track of each author of the paper
     def initUI(self):
 
         # BUTTONS
@@ -39,6 +44,9 @@ class MainWindow(QWidget):
         addPaperButton.clicked.connect(self.add_paper)
         submitButton.clicked.connect(self.submit_changes)
 
+        # HTML
+        self.htmlEdit = QLineEdit()
+
         # RePEc ENTRY
         self.entryEdit = QTextEdit()
 
@@ -48,7 +56,8 @@ class MainWindow(QWidget):
         grid.addWidget(addAuthorButton, 0, 0)
         grid.addWidget(addPaperButton, 0, 1)
         grid.addWidget(submitButton, 0, 2)
-        grid.addWidget(self.entryEdit, 1, 0, 1, 3)
+        grid.addWidget(self.htmlEdit, 1, 0, 1, 3)
+        grid.addWidget(self.entryEdit, 2, 0, 2, 3)
         self.setLayout(grid)
 
         self.resize(400, 400)
@@ -57,19 +66,24 @@ class MainWindow(QWidget):
         self.show()
 
     def add_author(self):
-        auth, ok = Author.getAuthorInfo()
+        authEntry, authorName, ok = Author.getAuthorInfo()
         if ok:
-            for line in auth:
+            for line in authEntry:
                 self.entryEdit.append(line)
+            self.authors.append(authorName)
 
     def add_paper(self):
-        paper, ok = Paper.getPaperInfo()
+        paper, paperHtml, ok = Paper.getPaperInfo()
         if ok:
             for line in paper:
                 self.entryEdit.append(line)
+            self.paperDetails = paperHtml
 
     def submit_changes(self):
-        pass
+        data = self.entryEdit.toPlainText()
+        addNewEntry(data)
+        htmlString = genHTML(self.paperDetails, self.authors)
+        self.htmlEdit.setText(htmlString)
 
 ###############################################################
 class Author(QDialog):
@@ -135,27 +149,29 @@ class Author(QDialog):
     def authorInfo(self):
         info = deque()
 
-        # Build up the full name
-        fullName = self.fNameEdit.text() + " "
-        if self.mNameEdit.text():
-            fullName += (self.mNameEdit.text() + ". ")
-        fullName += self.lNameEdit.text()
-
-        info.append('Author-Name: ' + fullName)
+        info.append('Author-Name: ' + self.getFullName())
         info.append('Author-X-Name-First: ' + self.fNameEdit.text())
         info.append('Author-X-Name-Last: ' + self.lNameEdit.text())
         info.append('Author-Person: ' + self.codeEdit.text())
         info.append('Author-Workplace-Name: ' + self.workplaceEdit.text())
         info.append('Author-Workplace-Homepage: ' + self.homepageEdit.text())
-        #info.append() #AUTHOR LAST NAME TO BUILD FILE URL
         return info
+
+    def getFullName(self):
+        # Build up the full name
+        fullName = self.fNameEdit.text() + " "
+        if self.mNameEdit.text():
+            fullName += (self.mNameEdit.text() + ". ")
+        fullName += self.lNameEdit.text()
+        return fullName
 
     @staticmethod
     def getAuthorInfo(parent = None):
         dialog = Author(parent)
         result = dialog.exec_()
         info = dialog.authorInfo()
-        return (info, result == QDialog.Accepted)
+        authorName = dialog.getFullName()
+        return (info, authorName, result == QDialog.Accepted)
 
 ###############################################################
 class Paper(QDialog):
@@ -233,8 +249,15 @@ class Paper(QDialog):
         info.append("Abstract: " + self.abstractEdit.toPlainText())
         info.append("Classification-JEL: " + self.classEdit.text())
         info.append("Keywords: " + self.keywordsEdit.text())
-        info.append("Length: " + str(self.lengthEdit.value()))
-        info.append("Number: " + str(self.numberEdit.value()))
+        info.append("Length: " + str(self.lengthEdit.value()) + " pages")
+
+        num = self.numberEdit.value()
+        if num < 10:
+            strNum = "0" + str(num) # The paper number should be two digits
+        else:
+            strNum = str(num)
+
+        info.append("Number: 2017-" + strNum) # TODO: fix year
         info.append("Note: ")
         info.append("Creation-date: " + str(self.createdEdit.date().toString('yyyy-MM')))
         info.append("Revision-date: ")
@@ -243,16 +266,33 @@ class Paper(QDialog):
         info.append("File-URL: " + self.urlTitleEdit.text())
         info.append("File-Format: Application/PDF")
         info.append("File-Function: Full text")
-        info.append("Handle: RePEc:wil:wileco:2017-" + str(self.numberEdit.value())) #TODO: fix year
+        info.append("Handle: RePEc:wil:wileco:2017-" + strNum) #TODO: fix year
 
         return info
+
+    # get the fields relevant to making the html entry
+    def htmlInfo(self):
+        paperHtml = []
+
+        # TODO: this code is duplicated in 'paperInfo' and is ugly
+        num = self.numberEdit.value()
+        if num < 10:
+            strNum = "0" + str(num) # The paper number should be two digits
+        else:
+            strNum = str(num)
+        paperHtml.append(strNum)
+        paperHtml.append(self.urlTitleEdit.text())
+        paperHtml.append(self.titleEdit.text())
+
+        return paperHtml
 
     @staticmethod
     def getPaperInfo(parent = None):
         dialog = Paper(parent)
         result = dialog.exec_()
         info = dialog.paperInfo()
-        return (info, result == QDialog.Accepted)
+        html = dialog.htmlInfo()
+        return (info, html, result == QDialog.Accepted)
 
 ###############################################################
 def main():
